@@ -27,6 +27,5 @@ jobs:
            docker build -t kamas/demo1:lastest .
            docker build -t kamas/demo1:${CIRCLE_SHA1} .
            docker push -t kamas/demo1:lastest
-           docker push -t kamas/demo1:${CIRCLE_SHA1}
-           
+           docker push -t kamas/demo1:${CIRCLE_SHA1}           
       - run: echo Done
