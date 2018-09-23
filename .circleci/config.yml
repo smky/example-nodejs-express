@@ -23,9 +23,10 @@ jobs:
       - run:  
         name: "Build docker image and push to docker hub"
         command: 
-           cp Dockerfile.production Dockerfile
-           docker build -t kamas/demo1:lastest .
-           docker build -t kamas/demo1:${CIRCLE_SHA1} .
-           docker push -t kamas/demo1:lastest
-           docker push -t kamas/demo1:${CIRCLE_SHA1}           
+          cp Dockerfile.production Dockerfile
+          docker build -t kamas/demo1:lastest .
+          docker build -t kamas/demo1:${CIRCLE_SHA1} .
+          docker push -t kamas/demo1:lastest
+          docker push -t kamas/demo1:${CIRCLE_SHA1}    
+
       - run: echo Done
