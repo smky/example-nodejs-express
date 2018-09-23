@@ -29,8 +29,8 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               cp Dockerfile.production Dockerfile
               docker build -t kamas/demo1:latest .
-              docker build -t kamas/demo1:${CIRCLE_SHA1} .
-              docker push kamas/demo1:${CIRCLE_SHA1}
+              docker build -t kamas/demo1:${CIRCLE_BUILD_NUM} .
+              docker push kamas/demo1:${CIRCLE_BUILD_NUM}
               docker push kamas/demo1:latest
             elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
               cp Dockerfile.staging Dockerfile
