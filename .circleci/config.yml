@@ -21,7 +21,7 @@ jobs:
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - run:  
         name: "Build docker image and push to docker hub"
-        command: 
+        command: |
           cp Dockerfile.production Dockerfile
           docker build -t kamas/demo1:lastest .
           docker build -t kamas/demo1:${CIRCLE_SHA1} .
