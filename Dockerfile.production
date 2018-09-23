@@ -8,6 +8,6 @@ WORKDIR /app
 
 RUN npm install
 
-CMD ["/app/bin/www"]
+CMD ["node" , "/app/bin/www"]
 
 EXPOSE 3000
